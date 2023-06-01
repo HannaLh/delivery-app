@@ -1,20 +1,15 @@
-import React from 'react';
+import React, {useState}from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import "./Card.css"; 
+import "./ProductBlock.css"; 
 
 export const ProductBlock = ({ id, title, price, imageUrl }) => {
     // const dispatch = useDispatch();
-    const cartItem = useSelector((state) => state.cart.items.find((obj) => obj.id === id));
-    const addedCount = cartItem ? cartItem.count : 0;
+    // const cartItem = useSelector((state) => state.cart.items.find((obj) => obj.id === id));
+    // const addedCount = cartItem ? cartItem.count : 0;
+    const [prodCount, setProdCount] = useState(0);
 
     const onClickAddProd = () => {
-        const item = {
-            id,
-            title,
-            price,
-            imageUrl,
-        };
-        // dispatch(addItem(item));
+        setProdCount(prodCount + 1);
     }
 
     return (
@@ -27,10 +22,10 @@ export const ProductBlock = ({ id, title, price, imageUrl }) => {
                 </div>
                 <div className='cart-button'>
                     <button onClick={onClickAddProd} className='cart-button__add'>+ Add to Bag
-                        {addedCount > 0 && <i className='cart-button__counter'>{addedCount}</i>}
+                        <i>{prodCount}</i>
                     </button>
                 </div>
             </div>
         </div>
-    )
+    );
 }

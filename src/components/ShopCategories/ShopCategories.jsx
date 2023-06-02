@@ -1,7 +1,7 @@
 import React from 'react';
 import './ShopCategories.css'
 
-const categories = ['McDonalds', 'KFC', 'Burgerking', 'Starbucks', 'PizzaHut', 'SaladStory']; 
+const categories = ['All','McDonalds', 'KFC', 'Burgerking', 'Starbucks', 'PizzaHut', 'SaladStory'];
 
 export default function ShopCategories({ value, onChangeCategory }) {
     return (

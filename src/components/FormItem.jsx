@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./app.css";
 import UserForm from './UserForm/UserForm'
 
 const FormItem = () => {
@@ -71,19 +70,18 @@ const FormItem = () => {
     };
 
     return (
-        <div className="app">
-        <form onSubmit={handleSubmit}>
-            <h1>Register</h1>
-            {inputs.map((input) => (
-            <UserForm
-                key={input.id}
-                {...input}
-                value={values[input.name]}
-                onChange={onChange}
-            />
-            ))}
-            <button>Submit</button>
-        </form>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <h1>Register</h1>
+                {inputs.map((input) => (
+                <UserForm
+                    key={input.id}
+                    {...input}
+                    value={values[input.name]}
+                    onChange={onChange}
+                />
+                ))}
+            </form>
         </div>
     );
 };

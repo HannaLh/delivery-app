@@ -25,22 +25,22 @@ export default function CartItem({ id, title, description, price, count, imageUr
     }
 
     return (
-        <div className="Cart-Item">
-            <div className="image-box">
-                <img className='cart-item-image' src={imageUrl} alt="cart item" width="190" height="200"></img>
+        <div className="cart-item">
+            <div className="cart-item__image-box">
+                <img className='cart-item__image' src={imageUrl} alt="cart item" width="190" height="200"></img>
             </div>
-            <div className="about">
-                <h1 className="title">{title}</h1>
-                <h3 className='description'>{description}</h3>
+            <div className="cart-item__about">
+                <h1 className="cart-item__title">{title}</h1>
+                <h3 className='cart-item__description'>{description}</h3>
             </div>
-            <div className="counter">
-                <button onClick={onClickPlus} className="btn">+</button>
-                <div className="count">{count}</div>
-                <button onClick={onClickMinus} className="btn">-</button>
+            <div className="cart-item__counter">
+                <button className="cart-item__btn" onClick={onClickPlus}>+</button>
+                <div className="cart-item__count">{count}</div>
+                <button className="cart-item__btn" disabled={count === 1} onClick={onClickMinus} >-</button>
             </div>
-            <div className="prices">
-                <div className="amount">${price * count}</div>
-                <button onClick={onClickRemove}className="remove"><u>Remove</u></button>
+            <div className="priccart-item__prices">
+                <div className="cart-item__amount">${price * count}</div>
+                <button className="cart-item__remove" onClick={onClickRemove}><u>Remove</u></button>
             </div>
         </div>
     )

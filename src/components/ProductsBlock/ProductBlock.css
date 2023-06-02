@@ -1,23 +1,47 @@
-.item-card-wrap {
-    border-bottom: 1px solid #C4C4C4;
-    width: 310px;
-    min-height: 310px;
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    column-gap: 40px;
+    row-gap: 40px;
 }
 
 .item-card {
-    display: flez;
-    flex-direction: column
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    width: 310px;
+    min-height: 310px;
+    padding: 10px;
 }
 
-.item-card-price {
+.item-card-img {
+    margin: 0 auto;
+}
+
+.item-card__info {
     display: flex;
     justify-content: center;
     padding: 12px 0 0 0;
-    column-gap: 40px;
+    row-gap: 20px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card__info-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.item-card__info-description {
     min-height: 60px;
 }
 
-.card-price h3 {
+.item-card__info-title {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;

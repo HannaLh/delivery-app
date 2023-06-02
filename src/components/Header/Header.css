@@ -1,0 +1,25 @@
+.header {
+    background-color: #FFFFFF;
+    color: black;
+    border-bottom: #a2a2a2 solid 2px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+}
+
+.header-nav__cart-ref {
+    margin-right: 65px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.header-nav__span {
+    padding: 0px 10px;
+    font-size: 15px;
+    text-transform: lowercase;
+    color: blue;
+}
